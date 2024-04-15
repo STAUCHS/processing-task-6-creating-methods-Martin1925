@@ -24,14 +24,14 @@ public class Sketch extends PApplet {
   public void draw() {
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
-          Square(intRow, intColumn);
+          Square(intRow, intColumn, 175, 100);
           
       }
     }
 
     for (int intRow = 0; intRow < 30; intRow++) {
       for (int intColumn = 0; intColumn < 30; intColumn++) {
-          Circle(intRow, intColumn);
+          Circle(intRow, intColumn, 255, 0);
       }
     }
 
@@ -47,12 +47,12 @@ public class Sketch extends PApplet {
 
     }
 
-  private void Square(int intRow, int intColumn) {
+  private void Square(int intRow, int intColumn, int intColor1, int intColor2) {
     int intX = 0;
     int intY = 0;
     intX = 3 + intRow*30;  // Instead of zero, calculate the proper intX location using 'intRow'
     intY = 3 + intColumn*30; // Instead of zero, calculate the proper intY location using 'intColumn'
-    fill(125);
+    fill(intColor1);
     noStroke();
     rect(intX, intY, 20, 20);
 
@@ -60,18 +60,18 @@ public class Sketch extends PApplet {
     int intY2 = 0;
     intX2 = 3 + intRow*30;  // Instead of zero, calculate the proper intX location using 'intRow'
     intY2 = 3 + intColumn*30; // Instead of zero, calculate the proper intY location using 'intColumn'
-    fill(175);
+    fill(intColor2);
     noStroke();
     rect(intX2, intY2, 10, 10);
 
 
   }
-  private void Circle(int intRow, int intColumn) {
+  private void Circle(int intRow, int intColumn, int intColor3, int intColour4) {
     int intX = 0;
     int intY = 0;
     intX = 3 + intRow*25;  // Instead of zero, calculate the proper intX location using 'intRow'
     intY = 3 + intColumn*45; // Instead of zero, calculate the proper intY location using 'intColumn'
-    fill(255);
+    fill(intColor3);
     noStroke();
     ellipse(intX, intY, 15, 15);
 
@@ -79,7 +79,7 @@ public class Sketch extends PApplet {
     int intY2 = 0;
     intX2 = 3 + intRow*25;  // Instead of zero, calculate the proper intX location using 'intRow'
     intY2 = 3 + intColumn*45; // Instead of zero, calculate the proper intY location using 'intColumn'
-    fill(0);
+    fill(intColour4);
     noStroke();
     ellipse(intX2, intY2, 5, 5);
 
